@@ -1,6 +1,7 @@
 # MiniLibX
 
 MiniLibX es una librería diseñada para facilitar la programación de aplicaciones gráficas simples en entornos Unix.
+Entender qué hacen y para qué sirven las funciones que contiene será fundamental para proyectos como [so_long](https://github.com/erivero-p/so_long).
 
 ### *¿Cómo usar MiniLibX?*
 
@@ -102,7 +103,7 @@ Respecto a `param`, Enrique lo que ha hecho es pasarle un puntero a la estructur
 
 - Las Keycodes de MacOS
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/22ecc914-b41e-4bca-91e6-629936832f19/Untitled.png)
+    ![Untitled](https://eastmanreference.com/img/complete-list-of-applescript-key-codes-t.png)
     
 
 ### mlx_hook
