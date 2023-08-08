@@ -133,3 +133,12 @@ Tiene también otras funciones para manejo de eventos del teclado y el ratón, y
 `int funct_ptr(int button, int x, int y, void *param);`
 
 Asigna una función de control de eventos a una acción específica del ratón, como hacer clic o mover el cursor. Esta función se ejecutará cuando se produzca el evento correspondiente. Además de recibir un entero con el botón del ratón a clickar (`1` para el izquierdo, `2` para el central y `3` para el derecho) recibe las coordenadas donde se ha producido el click.
+
+## Funciones para el bonus
+
+### **mlx_string_put**
+
+**`int mlx_string_put(void *mlx_ptr, void *win_ptr, int x, int y, int color, char *string);`**
+
+Se utiliza para mostrar strings en la ventana creada con MinilibX.
+Recibe el puntero mlx y el puntero a la ventana, dos enteros con las coordenadas en las que se mostrará la string, otro entero con el color del texto en formato hexadecimal, y por último, la string a mostrar por pantalla.
