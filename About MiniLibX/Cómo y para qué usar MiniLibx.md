@@ -116,7 +116,7 @@ Recibe:
 
 - El puntero a la ventana `win_ptr.`
 - Un entero `event` con el evento al que va a ir asociada la función de control. En el caso de cerrar la ventana, el evento es el 17.
-- Una máscara de eventos`event_mask` que filtrará los eventos que desencadenarán la ejecución de la función de control. Hay algunas constantes definidas en miniLibX, como `mlx_key_press_mask` (máscara para eventos de tecla presionada), `mlx_button_press_mask` (máscara para eventos de botón del ratón presionado), `mlx_expose_mask` (máscara para eventos de exposición de la ventana), etc.
+- Una máscara de eventos`event_mask` que filtrará los eventos que desencadenarán la ejecución de la función de control. Hay algunas constantes definidas en miniLibX, como `mlx_key_press_mask` (máscara para eventos de tecla presionada), `mlx_button_press_mask` (máscara para eventos de botón del ratón presionado), `mlx_expose_mask` (máscara para eventos de exposición de la ventana), etc. Si no queremos filtrar nada, pasaremos 0.
 - Un puntero a la función `funct` de control de eventos a ejecutar cuando ocurra el evento especificado.
 - Y el puntero a parámetro adicional `param`.
 
@@ -138,7 +138,7 @@ Asigna una función de control de eventos a una acción específica del ratón, 
 
 ### **mlx_string_put**
 
-**`int mlx_string_put(void *mlx_ptr, void *win_ptr, int x, int y, int color, char *string);`**
+`int mlx_string_put(void *mlx_ptr, void *win_ptr, int x, int y, int color, char *string);`
 
 Se utiliza para mostrar strings en la ventana creada con MinilibX.
 Recibe el puntero mlx y el puntero a la ventana, dos enteros con las coordenadas en las que se mostrará la string, otro entero con el color del texto en formato hexadecimal, y por último, la string a mostrar por pantalla.
