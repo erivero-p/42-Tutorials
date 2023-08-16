@@ -83,8 +83,8 @@ int	main(void)
 Para comprobar que se está ejecutando en paralelo, podemos hacer que la función de rutina imprima dos mensajes con una espera en medio, de forma que se viese diferente si se imprimiesen en serie o en paralelo. Si lo hemos hecho correctamente, los hilos deberán funcionar en paralelo.
 
 ```c
-**Impresión en serie:         Impresión en paralelo:**
-**Mensaje 1                   Mensaje 1
+*Impresión en serie:         Impresión en paralelo:*
+Mensaje 1                   Mensaje 1
 Mensaje 2                   Mensaje 1
 Mensaje 1                   Mensaje 2
 Mensaje 2                   Mensaje 2
@@ -145,7 +145,7 @@ int	main(void)
 }
 ```
 
-### Detachable threads (`**pthread_detach` )**
+### Detachable threads (`pthread_detach` )
 
 `int pthread_detach(pthread_t thread);`
 
