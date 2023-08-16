@@ -1,3 +1,5 @@
+# 🧵Hilos en C🧵
+
 Un hilo o subproceso es una unidad básica de ejecución dentro de un proceso o programa en ejecución. El proceso tiene su espacio de memoria y recursos asignados, mientras que los hilos comparten el mismo espacio de memoria y recursos. Aunque comparten recursos, pueden realizar tareas de forma independiente. Los hilos permiten que un programa realice varias tareas de forma concurrente.
 
 | Proceso | Hilo |
