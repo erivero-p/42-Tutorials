@@ -60,7 +60,7 @@ int	main(void)
 {
 	pthread_t	tid;
 
-	pthread_create(&t1, NULL, &routine, NULL);
+	pthread_create(&t1, NULL, routine, NULL);
 	pthread_join(t1, NULL);
 	return (0);
 }
@@ -74,8 +74,8 @@ int	main(void)
 	pthread_t	t1;
 	pthread_t	t2;
 
-	pthread_create(&t1, NULL, &routine, NULL);
-	pthread_create(&t2, NULL, &routine, NULL);
+	pthread_create(&t1, NULL, routine, NULL);
+	pthread_create(&t2, NULL, routine, NULL);
 	pthread_join(t1, NULL);
 	pthread_join(t2, NULL);
 	return (0);
@@ -109,7 +109,7 @@ int	main(void)
 {
 	pthread_t	t1;
 
-	if (pthread_create(&t1, NULL, &routine, NULL) != 0)
+	if (pthread_create(&t1, NULL, routine, NULL) != 0)
 		return (-1);
 	if (pthread_join(t1, NULL) != 0)
 		return (-1);
@@ -131,7 +131,7 @@ int	main(void)
 	i = 0;
 	while (i < 4)
 	{
-		if (pthread_create(th + i, NULL, &routine, NULL) != 0)
+		if (pthread_create(th + i, NULL, routine, NULL) != 0)
 			return (-1);
 		i++;
 	}
@@ -242,7 +242,7 @@ int	main(void)
 	pthread_t		t1;
 
 	pthread_mutex_init(&mutex, NULL);
-	if (pthread_create(&t1, NULL, &routine, NULL) != 0)
+	if (pthread_create(&t1, NULL, routine, NULL) != 0)
 		return (-1);
 	if (pthread_join(t1, NULL) != 0)
 		return (-1);
@@ -286,7 +286,7 @@ int	main(void)
 	pthread_t	t1;
 	int			*ret;
 
-	if (pthread_create(&t1, NULL, &routine, NULL) != 0)
+	if (pthread_create(&t1, NULL, routine, NULL) != 0)
 		return (-1);
 	if (pthread_join(t1, (void **)&ret) != 0)
 		return (-1);
@@ -333,7 +333,7 @@ int	main(void)
 	{
 		i_ptr = malloc(sizeof(int));
 		*i_ptr = i;
-		if (pthread_create(th + i, NULL, &routine, i_ptr) != 0)
+		if (pthread_create(th + i, NULL, routine, i_ptr) != 0)
 			return (-1);
 		i++;
 	}
