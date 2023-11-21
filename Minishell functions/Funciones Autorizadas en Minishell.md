@@ -1,5 +1,3 @@
-- Índice (las he ordenado como he podido no me juzgues)
-
 # {···} Funciones Autorizadas en Minishell
 
 # Funciones para trabajar con directorios y archivos
