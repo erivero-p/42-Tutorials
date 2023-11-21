@@ -1,8 +1,7 @@
 # {···} Funciones Autorizadas en Minishell
+## Funciones para trabajar con directorios y archivos
 
-# Funciones para trabajar con directorios y archivos
-
-### `**getcwd**`
+### `getcwd`
 
 `char *getcwd(char *buf, size_t size);` 
 
@@ -113,7 +112,7 @@ Similar a las anteriores, pero en lugar de aceptar la ruta, acepta el descriptor
 
 Se utiliza para eliminar un archivo cuya ruta recibe por argumento. Elimina el enlace entre el nombre del archivo y sus datos. Devuelve 0 o -1 en caso de error.
 
-# Funciones para trabajar con procesos
+## Funciones para trabajar con procesos
 
 ### `fork`
 
@@ -166,7 +165,7 @@ Más avanzada que `wait`, proporciona informacióna dicional sobre los recursos 
 
 Similar a `wait3` pero permite indicarle el `pid` del hilo a esperar.
 
-# Funciones para trabajar con señales
+## Funciones para trabajar con señales
 
 ### `signal`
 
@@ -206,7 +205,7 @@ Los campos principales de la estructura **`struct sigaction`** son los siguiente
 
 Envía una señal a un proceso determinado. Si falla devolverá -1, si funciona correctamente, devuelve 0.
 
-# Funciones para trabajar con pipes
+## Funciones para trabajar con pipes
 
 ### **`execve`**
 
@@ -236,7 +235,7 @@ Duplica un descriptor de antiguo en uno nuevo específico, que recibe como pará
 
 Recibe un array con dos enteros, siendo `pipefd[0]` el extremo de lectura de la tubería, y `pipefd[1]` el extremo de escritura.  La función une ambos extremos, creando una tubería de comunicación unidireccional. Devuelve 0 si hay éxito y -1 si no.
 
-# Funciones de manejo de errores
+## Funciones de manejo de errores
 
 ### **`strerror`**
 
@@ -249,8 +248,6 @@ Toma un número de error, generalmente almacenado en la variable global `errno` 
 `void perror(const char *s);`
 
 Imprime en consola un mensaje de error, seguido en una descripción basada en el número de error almacenado en `errno`.
-
-# Funciones para trabajar con terminales
 
 ## Funciones de la librería <readline.h>
 
