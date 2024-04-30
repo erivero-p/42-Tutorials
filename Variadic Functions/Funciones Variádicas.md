@@ -79,14 +79,6 @@ int main()
 }
 ```
 
-**Producción**: 
 
-```c
-Variadic functions:
-
- 1 + 2 = 3
- 3 + 4 + 5 = 12
- 6 + 7 + 8 + 9 = 30
-```
 
 Antes de usar las funciones que nos incluye la librería tenemos que definir un dato donde vamos a guardar todos los argumentos variádicos que hemos metido. Para ello nos ofrecen el tipo de dato va_list. Después de definir un va_list, es importante entender que aun no le hemos metido datos de ningún tipo. Para ellos tenemos que usar la función `va_start`, en la que diremos primero dónde va a almacenar los argumentos y segundo cual es el último argumento no variádico. la función `va_arg` es la encargada de devolver el próximo argumento, hay que indicarle el tipo de dato que es. Por ultimo es importante terminar esta lista usando la función `va_end` y dandole como argumento la lista en cuestión.
