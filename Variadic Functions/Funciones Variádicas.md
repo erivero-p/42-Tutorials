@@ -25,7 +25,9 @@ Esta librería incluye los siguientes métodos:
 
 Aquí, **va_list** contiene la información que necesitan **va_start,** **va_arg, va_end**  y **va_copy**.
 
-**argN** es el último argumento no variádico que reciba mi función variádica. En mi ejemplo, sería char c. (Si no lo he entendido yo mal xd) 
+**argN** es el último argumento no variádico (fijo) que reciba mi función variádica. En mi ejemplo, sería char c.
+
+A la hora de hacer una función variádica, primero deberemos definir una variable donde guardaremos los argumentos variádicos que reciba nuestra función en cada llamada. Para ello, tenemos la variable de tipo va_list. Que, una vez declarada, deberemos inicializar con `va_start`. Durante la ejecución de nuestra función, podrá acceder a los argumentos utilizando `va_arg` y no deberemos olvidar cerrar la lista con `va_end`.
 
 *Ejemplo de una función variádica*
 
@@ -80,5 +82,3 @@ int main()
 ```
 
 
-
-Antes de usar las funciones que nos incluye la librería tenemos que definir un dato donde vamos a guardar todos los argumentos variádicos que hemos metido. Para ello nos ofrecen el tipo de dato va_list. Después de definir un va_list, es importante entender que aun no le hemos metido datos de ningún tipo. Para ellos tenemos que usar la función `va_start`, en la que diremos primero dónde va a almacenar los argumentos y segundo cual es el último argumento no variádico. la función `va_arg` es la encargada de devolver el próximo argumento, hay que indicarle el tipo de dato que es. Por ultimo es importante terminar esta lista usando la función `va_end` y dandole como argumento la lista en cuestión.
